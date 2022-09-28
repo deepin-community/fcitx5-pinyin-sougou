@@ -1,0 +1,22 @@
+Source: fcitx5-pinyin-sougou
+Section: misc
+Priority: optional
+Maintainer: Deepin Input Method Team <chenshijie@uniontech.com>
+Uploaders:
+ Chen Shijie <chenshijie@uniontech.com>,
+Build-Depends:
+ debhelper-compat (= 13),
+ libime-bin,
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://github.com/CHN-beta/sougou-dict.git
+Vcs-Git: ssh://gerrit.uniontech.com:29418/input-method/fcitx5-pinyin-sougou.git
+Vcs-Browser: https://gerrit.uniontech.com/plugins/gitiles/input-method/fcitx5-pinyin-sougou
+
+Package: fcitx5-pinyin-sougou
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Description: Sougou Pinyin dictionary, 
+ dump from https://pinyin.sogou.com/dict.

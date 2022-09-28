@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+%:
+	dh $@
+
+INSTALL_DESTDIR = $(CURDIR)/debian/$(DEB_SOURCE)/
+
+execute_after_dh_install:
+	cat dict/*.txt > sougou.txt
+	libime_pinyindict sougou.txt sougou.dict
+	install -Dm644 sougou.dict -t $(INSTALL_DESTDIR)/usr/share/fcitx5/pinyin/dictionaries/
+	
